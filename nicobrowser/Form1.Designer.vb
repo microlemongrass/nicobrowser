@@ -33,19 +33,19 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtlabel_height = New System.Windows.Forms.TextBox()
-        Me.timtitlecheck = New System.Windows.Forms.Timer(Me.components)
         Me.numstyle = New System.Windows.Forms.NumericUpDown()
         Me.txtfontname = New System.Windows.Forms.TextBox()
         Me.numfore_b = New System.Windows.Forms.NumericUpDown()
         Me.numfore_r = New System.Windows.Forms.NumericUpDown()
         Me.numback_g = New System.Windows.Forms.NumericUpDown()
         Me.numfontsize = New System.Windows.Forms.NumericUpDown()
+        Me.txtlabel_height = New System.Windows.Forms.TextBox()
         Me.numfore_g = New System.Windows.Forms.NumericUpDown()
         Me.numhei = New System.Windows.Forms.NumericUpDown()
         Me.numback_r = New System.Windows.Forms.NumericUpDown()
         Me.numback_b = New System.Windows.Forms.NumericUpDown()
         Me.numwid = New System.Windows.Forms.NumericUpDown()
+        Me.timtitlecheck = New System.Windows.Forms.Timer(Me.components)
         Me.lblnote = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -157,19 +157,6 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "設定保存用"
         '
-        'txtlabel_height
-        '
-        Me.txtlabel_height.Location = New System.Drawing.Point(14, 178)
-        Me.txtlabel_height.Name = "txtlabel_height"
-        Me.txtlabel_height.Size = New System.Drawing.Size(45, 23)
-        Me.txtlabel_height.TabIndex = 222
-        Me.txtlabel_height.Text = "0"
-        '
-        'timtitlecheck
-        '
-        Me.timtitlecheck.Enabled = True
-        Me.timtitlecheck.Interval = 200
-        '
         'numstyle
         '
         Me.numstyle.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.nicobrowser.My.MySettings.Default, "numstyle", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
@@ -254,6 +241,14 @@ Partial Class Form1
         Me.numfontsize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numfontsize.Value = Global.nicobrowser.My.MySettings.Default.numfontsize
         '
+        'txtlabel_height
+        '
+        Me.txtlabel_height.Location = New System.Drawing.Point(14, 178)
+        Me.txtlabel_height.Name = "txtlabel_height"
+        Me.txtlabel_height.Size = New System.Drawing.Size(45, 23)
+        Me.txtlabel_height.TabIndex = 222
+        Me.txtlabel_height.Text = "0"
+        '
         'numfore_g
         '
         Me.numfore_g.BackColor = System.Drawing.Color.LavenderBlush
@@ -324,6 +319,11 @@ Partial Class Form1
         Me.numwid.TabIndex = 218
         Me.numwid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numwid.Value = Global.nicobrowser.My.MySettings.Default.numwid
+        '
+        'timtitlecheck
+        '
+        Me.timtitlecheck.Enabled = True
+        Me.timtitlecheck.Interval = 200
         '
         'lblnote
         '

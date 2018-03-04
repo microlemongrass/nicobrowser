@@ -108,6 +108,7 @@ Public Class Form1
 
     End Sub
 
+
     Private Sub GeckoWebBrowser1_ConsoleMessage(sender As Object, e As ConsoleMessageEventArgs) Handles web1.ConsoleMessage
 
         '■特定のエラーメッセージを捕捉時、更新ボタンを押す。
@@ -392,7 +393,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub lbl1_MouseDown(sender As Object, e As MouseEventArgs) Handles lblname.MouseDown
+    Private Sub lblname_MouseDown(sender As Object, e As MouseEventArgs) Handles lblname.MouseDown
 
         If Setting.chklocklabel.Checked = False Then
             mouse_state = 1
@@ -414,7 +415,8 @@ Public Class Form1
 
     End Sub
 
-    Private Sub lbl1_MouseMove(sender As Object, e As MouseEventArgs) Handles lblname.MouseMove
+
+    Private Sub lblname_MouseMove(sender As Object, e As MouseEventArgs) Handles lblname.MouseMove
 
         If Setting.chklocklabel.Checked = False Then
 
@@ -450,7 +452,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub lbl1_MouseUp(sender As Object, e As MouseEventArgs) Handles lblname.MouseUp
+    Private Sub lblname_MouseUp(sender As Object, e As MouseEventArgs) Handles lblname.MouseUp
 
         If Setting.chklocklabel.Checked = False Then
             mouse_state = 0
@@ -459,6 +461,78 @@ Public Class Form1
 
 
     End Sub
+
+
+    Private Sub lblnote_MouseDown(sender As Object, e As MouseEventArgs) Handles lblnote.MouseDown
+
+        If Setting.chklocklabel.Checked = False Then
+            mouse_state = 1
+            cx_first = Cursor.Position.X.ToString()
+            cy_first = Cursor.Position.Y.ToString()
+
+            x01 = lblname.Location.X
+            y01 = lblname.Location.Y
+
+        Else
+            If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+                '位置を記憶する
+                mousePoint = New Point(e.X, e.Y)
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub lblnote_MouseMove(sender As Object, e As MouseEventArgs) Handles lblnote.MouseMove
+
+        If Setting.chklocklabel.Checked = False Then
+
+            If mouse_state = 1 Then
+
+                cx_move = x01 + (Cursor.Position.X.ToString() - cx_first)
+                cy_move = y01 + (Cursor.Position.Y.ToString() - cy_first)
+
+                lblname.Location = New Point(cx_move, cy_move)
+
+                If lblname.Location.X < numwid.Value / 2 Then
+                    lblnote.Location = New Point(cx_move + lblname.Width, cy_move)
+
+                Else
+                    lblnote.Location = New Point(cx_move - lblnote.Width, cy_move)
+
+                End If
+
+            End If
+
+
+        ElseIf Setting.chklocklabel.Checked = True Then
+
+            If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+                Me.Left += e.X - mousePoint.X
+                Me.Top += e.Y - mousePoint.Y
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub lblnote_MouseUp(sender As Object, e As MouseEventArgs) Handles lblnote.MouseUp
+
+        If Setting.chklocklabel.Checked = False Then
+            mouse_state = 0
+
+        End If
+
+
+
+    End Sub
+
+
+
+
 
 
 
@@ -611,6 +685,7 @@ Public Class Form1
 
 
     End Sub
+
 
     '■更新ボタンを押す
     Private Sub reload_screen()

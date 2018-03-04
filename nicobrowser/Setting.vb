@@ -24,6 +24,11 @@ Public Class Setting
         Form1.lblname.Font = New Font(cmbfont.SelectedItem.ToString(), CInt(cmbfontsize.SelectedItem), _style)
         Form1.lblname.ForeColor = pnlfont_forecolor.BackColor
         Form1.lblname.BackColor = pnlfont_backcolor.BackColor
+
+        Form1.lblnote.Font = New Font(cmbfont.SelectedItem.ToString(), CInt(cmbfontsize.SelectedItem), _style)
+        Form1.lblnote.ForeColor = pnlfont_forecolor.BackColor
+        Form1.lblnote.BackColor = pnlfont_backcolor.BackColor
+
         Form1.Panel1.BackColor = pnlfont_backcolor.BackColor
 
         Form1.txtfontname.Text = cmbfont.SelectedItem.ToString()
@@ -35,16 +40,6 @@ Public Class Setting
         Form1.numback_g.Value = pnlfont_backcolor.BackColor.G
         Form1.numback_b.Value = pnlfont_backcolor.BackColor.B
         Form1.numstyle.Value = numstyle_index.Value
-
-        'If chklabelview.Checked = True Then
-        '    Form1.lblname.Visible = True
-        '    Form1.lblnote.Visible = True
-
-        'ElseIf chklabelview.Checked = False Then
-        '    Form1.lblname.Visible = False
-        '    Form1.lblnote.Visible = False
-
-        'End If
 
         Form1.numwid.Value = numwid.Value
         Form1.numhei.Value = numhei.Value
@@ -67,7 +62,6 @@ Public Class Setting
             End If
 
         End If
-
 
 
         If chklabelview.Checked = True Then
@@ -147,6 +141,7 @@ Public Class Setting
                     End If
 
                 End If
+
 
             Else
                 'ラベルの位置は(0,0)or(0,20)
