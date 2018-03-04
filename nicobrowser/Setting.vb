@@ -75,14 +75,17 @@ Public Class Setting
 
                 If chkover.Checked = False Then
                     Form1.lblname.Location = New Point(0, 0)
+                    Form1.lblnote.Location = New Point(Form1.lblname.Width, 0)
 
                 ElseIf chkover.Checked = True Then
 
                     If chklocklabel.Checked = True Then 'タイトルバー消去
                         Form1.lblname.Location = New Point(0, 0)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, 0)
 
                     ElseIf chklocklabel.Checked = False Then 'タイトルバーの高さを20pxに
                         Form1.lblname.Location = New Point(0, 20)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, 20)
 
                     End If
 
@@ -93,14 +96,17 @@ Public Class Setting
                 'ラベルの位置は(右端-name.width,0 or 20)
                 If chkover.Checked = False Then
                     Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, 0)
+                    Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, 0)
 
                 ElseIf chkover.Checked = True Then
 
                     If chklocklabel.Checked = True Then 'タイトルバー消去
                         Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, 0)
+                        Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, 0)
 
                     ElseIf chklocklabel.Checked = False Then 'タイトルバーの高さを20pxに
                         Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, 20)
+                        Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, 20)
 
                     End If
 
@@ -111,14 +117,17 @@ Public Class Setting
                 'ラベルの位置は(0,ブラウザの高さ-ラベルの高さ + 0 or 20)
                 If chkover.Checked = False Then
                     Form1.lblname.Location = New Point(0, numhei.Value - Form1.lblname.Height + 0)
+                    Form1.lblnote.Location = New Point(Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 0)
 
                 ElseIf chkover.Checked = True Then
 
                     If chklocklabel.Checked = True Then 'タイトルバー消去
                         Form1.lblname.Location = New Point(0, numhei.Value - Form1.lblname.Height + 0)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 0)
 
                     ElseIf chklocklabel.Checked = False Then 'タイトルバーの高さを20pxに
                         Form1.lblname.Location = New Point(0, numhei.Value - Form1.lblname.Height + 20)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 20)
 
                     End If
 
@@ -129,15 +138,16 @@ Public Class Setting
                 'ラベルの位置は(右端-name.width,ブラウザの高さ-ラベルの高さ + 0 or 20)
                 If chkover.Checked = False Then
                     Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 0)
+                    Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, numhei.Value - Form1.lblname.Height + 0)
 
                 ElseIf chkover.Checked = True Then
 
                     If chklocklabel.Checked = True Then 'タイトルバー消去
                         Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 0)
-
+                        Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, numhei.Value - Form1.lblname.Height + 0)
                     ElseIf chklocklabel.Checked = False Then 'タイトルバーの高さを20pxに
                         Form1.lblname.Location = New Point(numwid.Value - Form1.lblname.Width, numhei.Value - Form1.lblname.Height + 20)
-
+                        Form1.lblnote.Location = New Point(numwid.Value - Form1.lblname.Width - Form1.lblnote.Width, numhei.Value - Form1.lblname.Height + 20)
                     End If
 
                 End If
@@ -148,18 +158,22 @@ Public Class Setting
 
                 If chkover.Checked = False Then
                     Form1.lblname.Location = New Point(0, 0)
+                    Form1.lblnote.Location = New Point(Form1.lblname.Width, 0)
 
                 ElseIf chkover.Checked = True Then
 
                     If chklocklabel.Checked = True Then 'タイトルバー消去
                         Form1.lblname.Location = New Point(0, 0)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, 0)
 
                     ElseIf chklocklabel.Checked = False Then 'タイトルバーの高さを20pxに
                         Form1.lblname.Location = New Point(0, 20)
+                        Form1.lblnote.Location = New Point(Form1.lblname.Width, 20)
 
                     End If
 
                 End If
+
 
             End If
 
