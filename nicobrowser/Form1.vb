@@ -34,39 +34,37 @@ Public Class Form1
         Gecko.GeckoPreferences.User("browser.cache.disk.enable") = False
 
 
-        'Gecko.GeckoPreferences.User("browser.tabs.remote.autostart.2") = False
-        'Gecko.GeckoPreferences.User("browser.tabs.remote.autostart") = False
-        'Gecko.GeckoPreferences.User("extensions.e10sBlocksEnabling") = True
-        'Gecko.GeckoPreferences.User("extensions.e10sBlockedByAddons") = True
-        'Gecko.GeckoPreferences.User("dom.ipc.plugins.asyncdrawing.enabled") = False
-        'Gecko.GeckoPreferences.User("html5.offmainthread") = False
-        'Gecko.GeckoPreferences.User("network.http.max-persistent-connections-per-server") = 20
-        'Gecko.GeckoPreferences.User("network.predictor.enable-prefetch") = False
-        'Gecko.GeckoPreferences.User("network.prefetch-next") = False
+        '以下関係あるかも________________________________________________________
 
-        'Gecko.GeckoPreferences.User("network.http.speculative-parallel-limit") = 0 '先読み
-        'Gecko.GeckoPreferences.User("network.dns.disablePrefetch") = True
-        'Gecko.GeckoPreferences.User("network.dns.disablePrefetchFromHTTPS") = True
-        'Gecko.GeckoPreferences.User("network.predictor.enabled") = False
 
-        'Gecko.GeckoPreferences.User("network.captive-portal-service.enabled") = False
-        'Gecko.GeckoPreferences.User("network.http.spdy.enabled") = False
-        'Gecko.GeckoPreferences.User("network.http.spdy.enabled.deps") = False
-        'Gecko.GeckoPreferences.User("network.http.spdy.enabled.http2") = False
+        Gecko.GeckoPreferences.User("network.predictor.enable-prefetch") = False
+        Gecko.GeckoPreferences.User("network.prefetch-next") = False
+        Gecko.GeckoPreferences.User("network.http.speculative-parallel-limit") = 0 '先読み
+        Gecko.GeckoPreferences.User("network.dns.disablePrefetch") = True
+        Gecko.GeckoPreferences.User("network.dns.disablePrefetchFromHTTPS") = True
+        Gecko.GeckoPreferences.User("network.predictor.enabled") = False
+
+        Gecko.GeckoPreferences.User("network.captive-portal-service.enabled") = False
+        Gecko.GeckoPreferences.User("network.http.spdy.enabled") = False
+        Gecko.GeckoPreferences.User("network.http.spdy.enabled.deps") = False
+        Gecko.GeckoPreferences.User("network.http.spdy.enabled.http2") = False
+
         'Gecko.GeckoPreferences.User("javascript.options.mem.max") = 56636
         'Gecko.GeckoPreferences.User("javascript.options.mem.high_water_mark") = 32
 
-        'Gecko.GeckoPreferences.User("permissions.default.image") = 2
-        'Gecko.GeckoPreferences.User("permissions.default.camera") = 2
-        'Gecko.GeckoPreferences.User("permissions.default.desktop-notification") = 2
-        'Gecko.GeckoPreferences.User("general.useragent.locale") = "ja-JP"
-        'Gecko.GeckoPreferences.User("browser.cache.memory.capacity") = 98304
-        'Gecko.GeckoPreferences.User("browser.cache.disk.enable") = False
-        'Gecko.GeckoPreferences.User("webgl.enable-webgl2") = False
-        'Gecko.GeckoPreferences.User("webgl.dxgl.enabled") = False
-        'Gecko.GeckoPreferences.User("webgl.disabled") = True
-        'Gecko.GeckoPreferences.User("webgl.disable-wgl") = True
-        'Gecko.GeckoPreferences.User("network.dns.disableIPv6") = True
+        Gecko.GeckoPreferences.User("network.dns.disableIPv6") = True
+
+
+        Gecko.GeckoPreferences.User("webgl.enable-webgl2") = False
+        Gecko.GeckoPreferences.User("webgl.dxgl.enabled") = False
+        Gecko.GeckoPreferences.User("webgl.disabled") = True
+        Gecko.GeckoPreferences.User("webgl.disable-wgl") = True
+
+
+        Gecko.GeckoPreferences.User("dom.ipc.plugins.asyncdrawing.enabled") = True 'Trueの方がいいかも
+
+        'Gecko.GeckoPreferences.User("html5.offmainthread") = False
+        'Gecko.GeckoPreferences.User("network.http.max-persistent-connections-per-server") = 20
 
 
         '以下不要_______________________________________________________________________________
